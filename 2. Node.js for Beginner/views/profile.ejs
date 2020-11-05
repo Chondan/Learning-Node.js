@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body {
+			background-color: skyblue; 
+			font-family: verdana;
+			color: #fff;
+			padding: 30px;
+		}
+		h1 {
+			font-size: 48px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			text-align: center;
+		}
+		p, li {
+			font-size: 16px;
+			text-align: center;
+		}
+		a {
+			text-align: center;
+			display: block;
+		}
+		h2 {
+			font-size: 30px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			text-align: center;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+	<title>Profile</title>
+</head>
+<body>
+	<%- include('partials/nav'); %>
+	<h1>Welcome to the profile of <%= person %></h1>
+	<p><strong>Age: </strong><%= data.age %></p>
+	<p><strong>Job: </strong><%= data.job %></p>
+	<h2>Hobbies</h2>
+	<ul>
+		<% data.hobbies.forEach(hobby => { %>
+			<li><%= hobby %></li>
+		<% }); %>
+	</ul>
+</body>
+</html>
