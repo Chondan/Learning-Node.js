@@ -456,7 +456,7 @@ function sendEmail() {
 		service: "gmail",
 		auth: {
 			user: "stampcs7@gmail.com",
-			pass: "rgdacyerzuodctvv" // using App password
+			pass: "" // using App password
 		}
 	});
 
